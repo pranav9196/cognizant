@@ -9,8 +9,6 @@
 
 	<title>Code Cafe | Home</title>
 
-	<!-- favicon -->
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="msapplication-TileColor" content="#ffffff"> <!-- changes color of toolbar in mobile -->	
 
@@ -26,6 +24,8 @@
 
 	<!-- custom css stylesheet -->
 	<link rel="stylesheet" href="custom.css">
+
+
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 
 			<div class="brand-content searchBar search1">
 				<i class="material-icons search">search</i>
-				<input type="text" name="" id="searchterm" placeholder="search by tags">
+				<input type="text" name="" id="searchterm" placeholder="search by title, level or language">
 			</div>
 		</div>		
 	</header>
@@ -51,9 +51,90 @@
 	</div>
 	<!-- header -->
 	
+	<main>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="cardwrap">
+					<!--Cards-->
+					<!-- filter card -->
+					<div class="card card-filter">
+						<p class="card-heading">Filters</p>
+
+						<ul class="filters-list">
+							<li>
+								<input type="checkbox" class="checkbox" checked>
+								<div>Vote Up</div>
+							</li>
+							<li>
+								<input type="checkbox" class="checkbox">
+								<div>Vote Down</div>
+							</li>
+							<li>
+								<input type="checkbox" class="checkbox">
+								<div>Learners</div>
+							</li>
+							<li>
+								<input type="checkbox" class="checkbox">
+								<div>Duration</div>
+							</li>
+						</ul>
+						
+					</div>
+
+					<!-- statistical analysis card -->
+					<div class="card card-stats">
+						<p class="card-heading">Statistical Analysis</p>
+						<div>
+							<div class="head top-5">
+								<p class="card-heading sub">Top-5 programming language used</p>							
+								<ul id="pills" class="pillswrap">
+									<!-- dynamic data -->									
+								</ul>
+							</div>
+							<div class="head top-2">
+								<p class="card-heading sub">Top-2 Submissions</p>
+								<div id="top2">
+									<!-- dynamic data -->									
+								</div>
+								
+							</div>
+							<div class="head submission-no">
+								<p class="card-heading sub">No. of submissions per level</p>
+								<ul id="levels" class="pillswrap">
+									<!-- dynamic data -->
+								</ul>
+							</div>
+							<div id="total_submission">
+									<!-- dynamic data -->								
+							</div>
+						</div>
+					</div>
+					<!--/.Cards-->
+				</div>
+			</div>
+			<div class="col-md-9">
+	
+				<!-- the input fields that will hold the variables we will use -->
+				<input type='hidden' id='current_page' />
+				<input type='hidden' id='show_per_page' />
+				<div id="cardwrap1" class="cardwrap padding-fix">
+					
+					
+				</div>
+
+				<!-- pagination -->
+
+				<!-- An empty div which will be populated using jQuery -->  
+				<div id='page_navigation'></div>
+				<!-- pager ends -->
+			</div>
+		</div>
+	</main>
+
+
 	
 	<!-- javascript -->
-	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
